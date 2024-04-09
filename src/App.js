@@ -4,11 +4,11 @@ import About from './components/About';
 import EditorForm from './components/EditorForm';
 import Header from './components/Header'
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 
 function App() {
 
@@ -58,16 +58,18 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Header title="TextEditor" mode={mode} toggleMode={toggleMode} passMode={getMode} />
         <Alert alert={alert} />
         <div className="container my-3 pt-5">
-          <Routes>
+        <EditorForm heading="Use Below Text Area For Text Editing" mode={mode} alert={createAlert} />
+        {/* <About mode={mode} /> */}
+          {/* <Routes>
             <Route exact path="/about" element={<About mode={mode}  />}></Route>
             <Route exact path="/" element={<EditorForm heading="Use Below Text Area For Text Editing" mode={mode} alert={createAlert} />}></Route>
-          </Routes>
+          </Routes> */}
         </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
